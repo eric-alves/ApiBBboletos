@@ -19,7 +19,7 @@ class RegistrarBoletoController extends Controller
 		$datadaemissao = sprintf("%02d", date("d")) . '.' . sprintf("%02d", date("m")) . '.' . date("Y");
 		$datadovencimento = $request->datadovencimento; 					// Segundo a especificação, deve ser no formato DD.MM.AAAA
 		$valor = $request->valor;											// No formato inglês (sem separador de milhar)
-		$tipodedocumentodocliente = 2;										// 1 para CPF e 2 para CNPJ
+		$tipodedocumentodocliente = $request->tipodedocumentodocliente;;										// 1 para CPF e 2 para CNPJ
 		$numerodedocumentodocliente = $request->numerodedocumentodocliente;	// CPF ou CNPJ, sem pontos ou traços
 		$nomedocliente = $request->nomedocliente;
 		$enderecodocliente = $request->enderecodocliente;
